@@ -1,0 +1,67 @@
+<!--hidden picture reveal-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Match Game</title>
+    <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
+    <link rel="icon" href="./resources/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="color">
+    <header>
+      <div class=logo>
+        <img src="./resources/EPYouTubeBanner2-01.jpg" />
+      </div>
+    </header>
+    <h1>Find the Match</h1>
+    <div class="game-space">
+    <div class="directions">
+      <h3>Directions:</h3>
+      <p>
+        Click on two cards. If they don't match, they will turn back over for you to try again. When you do make a match, you'll get a peek at part of the hidden picture.
+      </p>
+      <h3>Pay Attention!</h3>
+      <p>
+        The matching objects aren't the same! They just have the same answer.
+      </p>
+      <h3 id="start">PLAY!</h3>
+    </div>
+
+<!--This div gets empty. These are dummy cards to hold the layout until Play is clicked-->
+    <div id="game" class="card-layout">
+      <img class="end" src="./resources/swingride.jpg" />
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+
+<!--End Screen doesn't show until game over-->
+    <div id="endScreen">
+       <h2 id="again">Play Again?</h2>
+    </div>
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+   <script type="text/javascript" src="./resources/js/script.js"></script>
+</body>
+</html>

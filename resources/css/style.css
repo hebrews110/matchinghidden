@@ -1,0 +1,257 @@
+/*hidden picture reveal*/
+/*Memory Matching Game with strings on 12 cards.*/
+* {
+    -webkit-tap-highlight-color: transparent;
+} /*This is to hopefully keep it from highlighting blue in Silk.*/
+
+/*choosing font*/
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/*background color transition is for end game animation*/
+body {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #FFFFFD;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+/*Start Game Direction Box*/
+#start {
+  padding: 1rem;
+  border: 5px solid #98bed9;
+  border-radius: 15px;
+  font-weight: 900;
+  font-size: 2rem;
+  transition: all 250ms ease-in-out;
+}
+
+h3#start:hover {
+  color: #fff;
+  background-color: #98bed9;
+}
+
+
+/*Header banner*/
+.logo {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+/*Game Title*/
+h1 {
+  padding: 0 20px;
+  margin: 20px auto;
+  margin-bottom: 0;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*Game Board Area Originally because
+  the directions were on the page with
+  the game. Now holds the start and end
+  boxes. */
+.game-space {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  margin: auto;
+  padding: 0 30px 30px 30px;
+}
+
+/*Directions Box*/
+.directions {
+  position: absolute;
+  top: 370px;
+  margin: 0 auto;
+  z-index: 100;
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  border: 5px solid #000;;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  }
+
+/*Directions Headings*/
+h3 {
+  padding: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #98bed9;
+}
+
+/*directions paragraphs*/
+p {
+  padding: 0 4rem;
+}
+
+.end {
+  display: none;
+  height: auto;
+  width: 40rem;
+  z-index: 10;
+}
+/*Where the cards go, the lighter
+  blue box with black border*/
+.card-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+ -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 0;
+  width: 37rem;
+  height: 37rem;
+  background-image: url('../swingride.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  border: 5px solid #000;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/*each card and the flex puts the string
+  in the middle of the card*/
+.card {
+  padding: 10px;
+  height: 7rem;
+  width: 7rem;
+  background-color: rgb(32,64,86);
+  border: 5px solid #000;
+  border-radius: 15px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*The writing on the cards*/
+span {
+    font-size: 2rem;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*Above and below are for getting rid of blue highlight over span element when clicked in firefox*/
+span::-moz-selection {
+  background:transparent;
+}
+
+/*game over section
+  H2 Play Again?
+  endScreen is the box it's in*/
+h2 {
+  color: #98bed9;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 8rem;
+}
+
+#endScreen {
+  position: absolute;
+  top: 370px;
+  margin: 0 auto;
+  z-index: 100;
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  border: 5px solid #000;;
+  border-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+/* for smaller screens */
+@media only screen and (max-width: 760px) {
+  body {
+    width: 100%;
+  }
+  .card {
+    height: 6rem;
+    width: 6rem;
+  }
+  .card-layout {
+    width: 98%;
+    background-color: #fff;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px;
+  }
+  .game-space {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 98%;
+    margin: 0;
+    padding: 0;
+  }
+  .directions {
+    top: 300px;
+  }
+  #endScreen {
+    top: 300px;
+  }
+}
