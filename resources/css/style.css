@@ -222,7 +222,7 @@ h2 {
   body {
     width: 100%;
   }
-  .card {
+/*  .card {
     height: 6rem;
     width: 6rem;
   }
@@ -233,6 +233,7 @@ h2 {
     border: 0px;
     border-radius: 0px;
   }
+  */
   .game-space {
     display: -webkit-box;
     display: -ms-flexbox;
