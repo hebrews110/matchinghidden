@@ -12,9 +12,11 @@
   var two = 0;
   var $game = $('#game');
   var cards = [['0+1', 1], ['1+0', 1], ['1+1', 2], ['2+0', 2], ['2+1', 3], ['0+3', 3], ['1+3', 4], ['4+0', 4], ['1+4',5], ['5+0',5], ['1+5', 6], ['0+6', 6], ['6+1', 7], ['0+7', 7], ['7+1', 8], ['0+8', 8]];
+  var picture = ['swingride.jpg', 'sandcastle.jpg', 'socks.jpg', 'bubble.jpg'];
+  var p = 0;
+  var string = picture[p];
 
 $(document).ready(function() {
-
 
 //Shuffle the array
 //Takes the array and has them shuffled.
@@ -48,6 +50,7 @@ cards.shuffle();
 //When they click on Play it shuffles the cards and puts the values in
   $("#start").click(function() {
       $('.directions').css('display', 'none');
+         document.getElementById('game').style.backgroundImage = "url('" + string + "')";
       MatchGame.makeCards(cards, $game);
         count = cards.length;
    })
@@ -183,7 +186,13 @@ if (flippedCards.length === 2) {
 //Click on Play Again and the endScreen goes away and reshuffles the cards
 $("#again").click(function() {
     $('#endScreen').css('display', 'none');
+    p = p+1;
+    if (p===4) {
+      p=0;
+    };
+    string = picture[p];
     cards.shuffle();
+   document.getElementById('game').style.backgroundImage = "url('" + string + "')";
     MatchGame.makeCards(cards, $game);
       count = cards.length;
  })
