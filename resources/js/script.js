@@ -154,7 +154,7 @@ if (flippedCards.length === 2) {
       $('span').css('color', 'transparent');
       window.setTimeout(function(){
         $('#endScreen').css('display', 'block');
-      }, 5000);
+      }, 4000);
   } //end of if count = 0
 } // closes if the values match
 
