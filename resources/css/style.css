@@ -225,18 +225,15 @@ h2 {
   body {
     width: 100%;
   }
-/*  .card {
+ .card {
     height: 6rem;
     width: 6rem;
   }
   .card-layout {
-    width: 98%;
-    background-color: #fff;
-    padding: 0px;
-    border: 0px;
-    border-radius: 0px;
+    width: 33rem;
+    height: 33rem;
   }
-  */
+
   .game-space {
     display: -webkit-box;
     display: -ms-flexbox;
